@@ -16,10 +16,10 @@ def template_matching(template, image):
     return max_loc, max_val
 
 def main():
-    image_paths = ['C:/Users/tonyb/Desktop/Open CV/HomeWorks/Computer-Vision-Homeworks/HM4/assets/6.jpg', 'C:/Users/tonyb/Desktop/Open CV/HomeWorks/Computer-Vision-Homeworks/HM4/assets/7.jpg', 'C:/Users/tonyb/Desktop/Open CV/HomeWorks/Computer-Vision-Homeworks/HM4/assets/8.jpg']  # Update with your image paths
+    image_paths = ['C:/Users/tonyb/Desktop/Open CV/HomeWorks/Computer-Vision-Homeworks/HW4/assets/6.jpg', 'C:/Users/tonyb/Desktop/Open CV/HomeWorks/Computer-Vision-Homeworks/HW4/assets/7.jpg', 'C:/Users/tonyb/Desktop/Open CV/HomeWorks/Computer-Vision-Homeworks/HW4/assets/8.jpg']  # Update with your image paths
     images = [cv2.imread(img_path, cv2.IMREAD_GRAYSCALE) for img_path in image_paths]
 
-    template_path = 'C:/Users/tonyb/Desktop/Open CV/HomeWorks/Computer-Vision-Homeworks/HM4/assets/88.jpg'  # Update with your template image path
+    template_path = 'C:/Users/tonyb/Desktop/Open CV/HomeWorks/Computer-Vision-Homeworks/HW4/assets/88.jpg'  # Update with your template image path
     template = cv2.imread(template_path, cv2.IMREAD_GRAYSCALE)
 
     template_keypoints, template_descriptors = extract_features(template)
