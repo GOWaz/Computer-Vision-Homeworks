@@ -1,7 +1,7 @@
 import cv2 as cv
 import matplotlib.pyplot as plt
 
-img1 = cv.imread('C:/Users/tonyb/Desktop/Open CV/HomeWorks/Computer-Vision-Homeworks/HM4/4.jpg')
+img1 = cv.imread('C:/Users/tonyb/Desktop/Open CV/HomeWorks/Computer-Vision-Homeworks/HM4/assets/4.jpg')
 gray= cv.cvtColor(img1,cv.COLOR_BGR2GRAY)
 gray = cv.resize(gray,(400,400))
 cv.imshow('img',gray)
