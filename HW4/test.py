@@ -1,7 +1,7 @@
 import cv2
 import numpy as np
 
-def extract_features(image, method='sift'):
+def extract_features(image, method):
     if method.lower() == 'sift':
         detector = cv2.SIFT_create()
     elif method.lower() == 'orb':
@@ -22,10 +22,10 @@ def main():
     template_path = 'C:/Users/tonyb/Desktop/Open CV/HomeWorks/Computer-Vision-Homeworks/HW4/assets/88.jpg'  # Update with your template image path
     template = cv2.imread(template_path, cv2.IMREAD_GRAYSCALE)
 
-    template_keypoints, template_descriptors = extract_features(template)
+    template_keypoints, template_descriptors = extract_features(template,'sift')
 
     for idx, image in enumerate(images):
-        image_keypoints, image_descriptors = extract_features(image)
+        image_keypoints, image_descriptors = extract_features(image,'sift')
 
         bf = cv2.BFMatcher()
         matches = bf.knnMatch(template_descriptors, image_descriptors, k=2)
